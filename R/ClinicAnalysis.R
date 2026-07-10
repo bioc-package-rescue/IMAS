@@ -109,7 +109,7 @@ ClinicAnalysis <- function(ASdb,ClinicalInfo=NULL,CalIndex=NULL,
     names(pre.result) <- c("ES","ASS","IR")
     total.types <- names(pre.result)
     total.types <- total.types[lengths(pre.result) > 1]
-    if (display){
+    if (display && length(total.types) == 1){
         if (total.types == "ES")    return (pre.result$"ES")
         if (total.types == "ASS")    return (pre.result$"ASS")
         if (total.types == "IR")    return (pre.result$"IR")
